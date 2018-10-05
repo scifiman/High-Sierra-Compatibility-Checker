@@ -83,7 +83,7 @@ OSVERSIONMAJOR=$(sw_vers -productVersion | awk -F"." '{ print $2 }')
 OSVERSIONMINOR=$(sw_vers -productVersion | awk -F"." '{ print $3 }')
 
 # Checks if computer meets pre-requisites for High Sierra
-if [[ "$OSVERSIONMAJOR" -ge 8 && "$OSVERSIONMAJOR" -lt 13 || "$OSVERSIONMAJOR" -eq 7 && "OSVERSIONMINOR" -eq 5 ]]; then
+if [[ "$OSVERSIONMAJOR" -ge 8 && "$OSVERSIONMAJOR" -le 13 || "$OSVERSIONMAJOR" -eq 7 && "OSVERSIONMINOR" -eq 5 ]]; then
 	
 	# Transform GB into Bytes
 	GIGABYTES=$((1024 * 1024 * 1024))
